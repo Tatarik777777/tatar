@@ -62,7 +62,7 @@ server.on('connect', (req, clientSocket, head) => {
 
  const auth = req.headers['proxy-authorization'];
 
- if (!auth || auth !== 'Basic ' + Buffer.from('user:password').toString('base64')) {
+ if (!auth || auth !== 'Basic ' + Buffer.from('tatar:tatar').toString('base64')) {
 
   clientSocket.write('HTTP/1.1 407 Proxy Authentication Required\r\nProxy-Authenticate: Basic realm="Proxy"\r\n\r\n');
 
